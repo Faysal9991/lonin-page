@@ -11,7 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen()
+      title: "workout",
+      themeMode: ThemeMode.dark,theme: ThemeData.dark().copyWith(
+      primaryColor: Colors.blue,
+      hintColor: Colors.white,
+      textTheme: const TextTheme(subtitle1: TextStyle(color: Colors.white))
+    ),
+debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
     );
   }
 }

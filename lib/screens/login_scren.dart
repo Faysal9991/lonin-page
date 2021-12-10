@@ -1,30 +1,35 @@
 import 'package:flutter/material.dart';
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
   Widget build(BuildContext context) {
-    final double hight= MediaQuery.of(context).size.height;
-    final double width= MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
+      backgroundColor: Colors.black,
+      body: Stack(
         children: [
+        Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage("assets/images/bkc.jpg"),fit: BoxFit.cover
+            )
+          ),
+        ),
           Container(
-            width: width,
-            height: hight*0.2,
-            decoration:
-            BoxDecoration(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(70),
-                    topLeft: Radius.circular(70))
-
+            child: Column(
+              children: [
+                Text.rich(TextSpan(
+                  text: "HEARD\t",
+                  style: TextStyle(letterSpacing: 5,fontSize: 30,color: Colors.blue)
+                ))
+              ],
             ),
-
-            child: Image.asset("assets/images/fb.png",fit: BoxFit.fitWidth,),
           )
         ],
-
       ),
     );
   }
