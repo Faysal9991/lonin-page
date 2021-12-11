@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "workout",
       themeMode: ThemeMode.dark,theme: ThemeData.dark().copyWith(
-      primaryColor: Colors.blue,
-      hintColor: Colors.white,
-      textTheme: const TextTheme(subtitle1: TextStyle(color: Colors.white))
+        primaryColor: Colors.blue,
+        hintColor: Colors.white,
+        textTheme: const TextTheme(subtitle1: TextStyle(color: Colors.white))
     ),
 debugShowCheckedModeBanner: false,
       home: LoginScreen(),
